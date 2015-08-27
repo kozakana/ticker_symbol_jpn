@@ -1,6 +1,7 @@
 require "ticker_symbol_jpn/version"
 require 'open-uri'
 require 'json'
+require 'spreadsheet'
 
 module TickerSymbolJpn extend self
   FIRST_LINE = "コード"
