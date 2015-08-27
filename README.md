@@ -9,10 +9,11 @@ Only Japan data.
 
 TickerSymbolJpn is used Web scraping. Therefore be careful about excessive access to a Web server.
 Please use weather data which is written by your program in a file.
+
 Webサーバーから毎回データを取得してくるため、Webサーバーに負荷がかかる可能性があります。使用する時はなるべく下記のようにファイルに書き出して使用してください。
 
-example:
 ```ruby
+# example
 save_code "codes.json"
 codes = load_code "codes.json"
 ```
@@ -59,6 +60,10 @@ Data of Tokyo Stock Exchange 2nd section.
 ### mothers_codes
 
 Data of Mothers.
+
+### jasdaq_codes
+
+Data of JASDAQ
 
 ### save_code(json_file_path)
 

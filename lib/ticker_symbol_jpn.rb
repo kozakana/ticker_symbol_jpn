@@ -19,9 +19,14 @@ module TickerSymbolJpn extend self
     "http://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/mothers-d-j.xls",
     "http://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/mothers-f-j.xls"
   ]
+  JASDAQ_URL = [
+    "http://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/jasdaq-g-j.xls",
+    "http://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/jasdaq-s-j.xls",
+    "http://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/jasdaq-f-j.xls"
+  ]
 
   def all_codes
-    urls = FIRST_URL + SECOND_URL + MOTHERS_URL
+    urls = FIRST_URL + SECOND_URL + MOTHERS_URL + JASDAQ_URL
     get_codes urls
   end
 
@@ -35,6 +40,10 @@ module TickerSymbolJpn extend self
 
   def mothers_codes
     get_codes MOTHERS_URL
+  end
+
+  def jasdaq_codes
+    get_codes JASDAQ_URL
   end
 
   def save_codes json_file_path
