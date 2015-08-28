@@ -65,11 +65,11 @@ Data of Mothers.
 
 Data of JASDAQ
 
-### save_code(json_file_path)
+### save_codes(json_file_path)
 
 Save to json_file_path.
 
-### load_code(json_file_path)
+### load_codes(json_file_path)
 
 Load from json_file_path.
 Return hash data.
