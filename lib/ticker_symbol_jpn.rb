@@ -68,8 +68,8 @@ module TickerSymbolJpn extend self
     codes = {}
 
     urls.each do |url|
-      book = Spreadsheet.open(open(url))
-      book.worksheet(SHEET_NAME).rows.each do |line|
+      book = Spreadsheet.open(open(url)).worksheet(SHEET_NAME)
+      book.each do |line|
         next if line[1] == FIRST_LINE
         codes[line[1].to_i] = line[2]
       end
